@@ -15,7 +15,9 @@ The idea is `http://hello.localhost` will be served from `www/hello` directory. 
 ## run nginx in nix-shell
 
 ```
-nix-shell -p "nginx" --run "nginx -p . -c nginx.conf"
+nix-shell -p nginx --run "nginx -p . -c nginx.conf"
+# or
+nix-shell -I nixpkgs=http://github.com/NixOS/nixpkgs/archive/e199c174c69f196301de2ad2d5d87c76a822a558.tar.gz -p nginx --run "nginx -p . -c nginx.conf"
 ```
 
 ```
